@@ -123,13 +123,11 @@ Where the first three models look at things from the customer's side, this one i
 
 ## Key findings
 
-- **Demand growth uncertainty drives ~3× more variance in long-term savings than price negotiation.** For customers evaluating consumption pricing, forecasting capability is a higher-leverage skill than discount authority.
+- **Demand growth uncertainty drives ~3× more variance in long-term savings than price negotiation.** For customers evaluating consumption pricing, forecasting capability is their highest leverage skill.
 
-- **CapEx storage is fundamentally a bet on a 5-year peak-demand forecast.** Customers buy capacity they may never use; consumption models charge them for what they actually consume. The savings depend almost entirely on how wrong the original forecast turns out to be.
+- **Discounting has diminishing returns.** Beyond ~25% total discount, Vendor win probability gains plateau while margin erodes linearly. The approval-tier system is a necessary structural backstop, not just a bureaucratic process.
 
-- **Discounting has diminishing returns.** Beyond ~25% total discount, win probability gains plateau while margin erodes linearly. The approval-tier system isn't bureaucratic — it's a structural backstop against margin destruction.
-
-- **Pricing should be quantified with confidence intervals, not point estimates.** "$500K savings" on a slide is less defensible than "with 80% confidence, you save between $X and $Y over 3 years." This is just the actuarial habit translated into a sales context.
+- **Pricing quantified with confidence intervals is more persuasive.** "$500K savings" on a slide is less defensible than "with 80% confidence, you save between $X and $Y over 3 years."
 
 ---
 
