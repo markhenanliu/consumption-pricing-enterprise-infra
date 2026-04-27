@@ -3,7 +3,7 @@
 > Four interconnected financial models exploring how enterprise infrastructure vendors should price consumption-based offerings against legacy CapEx alternatives — using **Storage-as-a-Service (STaaS)** as the case study.
 
 ---
-**[🎮 Try the interactive deal profitability calculator →](https://your-url.streamlit.app)**
+**[🎮 Try the interactive deal profitability calculator →](https://markhenanliu-consumption-pricing-enterp-appstreamlit-app-qwfuqd.streamlit.app/)**
 
 --- 
 
