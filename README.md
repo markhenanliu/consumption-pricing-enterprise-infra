@@ -113,7 +113,7 @@ Where the first three models look at things from the customer's side, this one i
 
 **Visualizations:** discount waterfall, P&L summary, segment × volume price differentiation matrix, win/margin tradeoff curve, NPV sensitivity grid, 40-deal portfolio map.
 
-> **Key takeaway:** beyond ~25% total discount, win probability gains plateau while margin erodes linearly. The approval-tier system isn't bureaucratic — it's a structural backstop against margin destruction.
+> **Key takeaway:** beyond ~25% total discount, win probability gains plateau while margin erodes linearly. The approval-tier system stands as a structural backstop against margin destruction.
 
 ⚠️ Win probability is modeled as a logistic function with illustrative parameters. It reflects the structural shape of price sensitivity, not empirically calibrated outcomes.
 
