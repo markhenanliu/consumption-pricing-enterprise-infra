@@ -21,9 +21,8 @@ During my internship in commercial risk advisory & risk analytics, I spent time 
 
 Around the same time I came across the **Storage-as-a-Service (STaaS)** consumption-pricing model, and it introduced me to the storage industry's version of the broader CapEx-to-OpEx shift happening across enterprise infrastructure. This was intriguing as although the domain was outside my background — I did not know what "data reduction ratio" or "burst tier" meant — the underlying problem looked familiar. 
 
-There is a customer choosing between a large upfront commitment under uncertainty (CapEx hardware) and flexible pay-as-you-go (OpEx subscription), and it seemed like a domain where the same probabilistic approach could illuminate decisions and offer value for both sides of the market, the vendor and the customer.
+There exists a customer choosing between a large upfront commitment under uncertainty (CapEx hardware) and flexible pay-as-you-go (OpEx subscription), and it seemed like a domain where the same probabilistic approach could illuminate decisions and offer value for both sides of the market, the vendor and the customer.
 
-So I built four models that connect those threads.
 
 ---
 
