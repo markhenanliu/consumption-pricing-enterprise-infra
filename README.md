@@ -19,7 +19,7 @@ The point of the exploration is the structural reasoning, not the specific numbe
 
 During my internship in commercial risk advisory & risk analytics, I spent time translating Monte Carlo aggregate-loss models into client-facing analytics and recommendations. But my role then was to communicate the outputs, not build the engine. I wanted to revisit that domain and rebuild a model from scratch to both reinforce my understanding of the math and to see how broadly the same probabilistic toolkit transfers to other domains. 
 
-Around the same time I came across the **Storage-as-a-Service (STaaS)** consumption-pricing model, and it introduced me to the storage industry's version of the broader CapEx-to-OpEx shift happening across enterprise infrastructure. This was intriguing as although the domain was outside my background — I was unaware what "data reduction ratio" or "burst tier" meant — but the underlying problem looked familiar. 
+Around the same time I came across the **Storage-as-a-Service (STaaS)** consumption-pricing model, and it introduced me to the storage industry's version of the broader CapEx-to-OpEx shift happening across enterprise infrastructure. This was intriguing as although the domain was outside my background — I did not know what "data reduction ratio" or "burst tier" meant — the underlying problem looked familiar. 
 
 There is a customer choosing between a large upfront commitment under uncertainty (CapEx hardware) and flexible pay-as-you-go (OpEx subscription), and it seemed like a domain where the same probabilistic approach could illuminate decisions and offer value for both sides of the market, the vendor and the customer.
 
