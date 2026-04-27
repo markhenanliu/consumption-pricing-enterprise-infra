@@ -2,8 +2,6 @@
 
 > Four interconnected financial models exploring how enterprise infrastructure vendors should price consumption-based offerings against legacy CapEx alternatives — using **Storage-as-a-Service (STaaS)** as the case study.
 
-![Deal Profitability Engine](outputs/model4_deal_profitability.png)
-
 ---
 
 ## A note on inputs and provenance
