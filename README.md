@@ -1,6 +1,6 @@
 # Consumption Pricing Models for Enterprise Infrastructure
 
-> Four interconnected financial models exploring how enterprise infrastructure vendors should price consumption-based offerings against legacy CapEx alternatives — using **Storage-as-a-Service (STaaS)** as the case study.
+> Four interconnected financial models exploring how enterprise infrastructure vendors should price consumption-based offerings against CapEx alternatives — using **Storage-as-a-Service (STaaS)** as the case study.
 
 ---
 **[🎮 Try the interactive deal profitability calculator →](https://markhenanliu-consumption-pricing-enterp-appstreamlit-app-qwfuqd.streamlit.app/)**
@@ -17,15 +17,17 @@ The point of the exploration is the structural reasoning, not the specific numbe
 
 ## Why I built this
 
-During my internship in commercial risk advisory & risk analytics, I spent time translating Monte Carlo aggregate-loss models into client-facing analytics — but my role was to communicate the outputs, not build the engine. I wanted to revisit that domain and rebuild a model from scratch, both to reinforce my understanding of the math and to see how broadly the same probabilistic toolkit transfers to other domains.
+During my internship in commercial risk advisory & risk analytics, I spent time translating Monte Carlo aggregate-loss models into client-facing analytics and recommendations. But my role then was to communicate the outputs, not build the engine. I wanted to revisit that domain and rebuild a model from scratch to both reinforce my understanding of the math and to see how broadly the same probabilistic toolkit transfers to other domains. 
 
-Around the same time I came across the **Storage-as-a-Service (STaaS)** consumption-pricing model — the storage industry's version of the broader CapEx-to-OpEx shift happening across enterprise infrastructure — and got curious. The domain was outside my background; I didn't know what a "data reduction ratio" or a "burst tier" was. But the underlying tension looked familiar: a customer choosing between a large upfront commitment under uncertainty (CapEx hardware) and flexible pay-as-you-go (OpEx subscription). It seemed like a domain where the same probabilistic approach could illuminate decisions that often get made on gut.
+Around the same time I came across the **Storage-as-a-Service (STaaS)** consumption-pricing model, and it introduced me to the storage industry's version of the broader CapEx-to-OpEx shift happening across enterprise infrastructure. This was intriguing as although the domain was outside my background — I was unaware what "data reduction ratio" or "burst tier" meant — but the underlying problem looked familiar. 
+
+There is a customer choosing between a large upfront commitment under uncertainty (CapEx hardware) and flexible pay-as-you-go (OpEx subscription), and it seemed like a domain where the same probabilistic approach could illuminate decisions and offer value for both sides of the market, the vendor and the customer.
 
 So I built four models that connect those threads.
 
 ---
 
-## The four models
+## The models
 
 ### 1. Insurance Aggregate Loss Monte Carlo
 
@@ -42,7 +44,7 @@ A frequency-severity simulation across three commercial insurance lines — outp
 - **P99** — catastrophic scenario → reinsurance attachment point
 - **Loss exceedance curve** — full picture for client renewal conversations
 
-This is the foundational engine — the methodological piece I rebuilt from past commercial risk work before applying the same toolkit to the next three models.
+This is the foundational model — the methodological piece I rebuilt from past commercial risk work before applying the same toolkit to the next three models.
 
 ![Insurance Monte Carlo](outputs/model1_insurance_monte_carlo.png)
 
@@ -63,7 +65,7 @@ A 5-year total-cost comparison: a CapEx-front-loaded on-premises deployment agai
 - **STaaS committed rate** — subscription price per TB per month
 - **Burst pricing** — fraction of usage above committed, billed at premium (typically +40%)
 
-> **Key takeaway:** the headline savings number isn't the interesting part — it's the *cash flow profile*. CapEx storage forces customers to buy for Year-5 peak demand on Day 1, then sit at low utilization for years. Consumption pricing flattens the curve.
+> **Key takeaway:** The *cash flow profile* is more interesting here than the pure savings. CapEx storage forces customers to buy for Year-5 peak demand on Day 1, then potentially sit at low utilization for years. Consumption pricing flattens that curve.
 
 ![STaaS TCO](outputs/model2_staas_tco.png)
 
@@ -114,6 +116,8 @@ Where the first three models look at things from the customer's side, this one i
 
 > **Key takeaway:** beyond ~25% total discount, win probability gains plateau while margin erodes linearly. The approval-tier system isn't bureaucratic — it's a structural backstop against margin destruction.
 
+⚠️ Win probability is modeled as a logistic function with illustrative parameters. It reflects the structural shape of price sensitivity, not empirically calibrated outcomes.
+
 ![Deal Profitability](outputs/model4_deal_profitability.png)
 
 ---
@@ -124,9 +128,7 @@ Where the first three models look at things from the customer's side, this one i
 
 - **CapEx storage is fundamentally a bet on a 5-year peak-demand forecast.** Customers buy capacity they may never use; consumption models charge them for what they actually consume. The savings depend almost entirely on how wrong the original forecast turns out to be.
 
-- **Churn is the silent killer of "won" deals.** A heavily discounted deal lost in year 2 is a worse outcome than a higher-priced deal that runs full term. Most pricing analyses ignore this; NPV with survival decay makes it explicit.
-
-- **The discount stack creates a margin cliff.** Beyond ~25% total discount, win probability gains plateau while margin erodes linearly. The approval-tier system isn't bureaucratic — it's a structural backstop against margin destruction.
+- **Discounting has diminishing returns.** Beyond ~25% total discount, win probability gains plateau while margin erodes linearly. The approval-tier system isn't bureaucratic — it's a structural backstop against margin destruction.
 
 - **Pricing should be quantified with confidence intervals, not point estimates.** "$500K savings" on a slide is less defensible than "with 80% confidence, you save between $X and $Y over 3 years." This is just the actuarial habit translated into a sales context.
 
@@ -172,4 +174,7 @@ Future explorations I'd like to take this in: cohort-based churn survival curves
 
 ---
 
-*Built with Python — NumPy, SciPy, Matplotlib. No proprietary data or tooling.*
+## Stack
+**Modeling:** Python — NumPy, SciPy, Matplotlib  
+**Interactive app:** Streamlit, Plotly  
+**Development environment:** Cursor  
