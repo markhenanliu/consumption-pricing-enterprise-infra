@@ -350,6 +350,9 @@ pricing_viz_left, pricing_viz_right = st.columns(2)
 
 with pricing_viz_left:
     waterfall_measure = ["absolute"] + ["relative"] * len(non_zero_components) + ["total"]
+    waterfall_text = [""] * len(discount_steps)
+    waterfall_text[0] = f"${deal['seg_adj_list']:.2f}"
+    waterfall_text[-1] = f"${deal['effective_rate']:.2f}"
     waterfall = go.Figure(
         go.Waterfall(
             name="Rate components",
@@ -357,7 +360,7 @@ with pricing_viz_left:
             measure=waterfall_measure,
             x=discount_labels,
             y=discount_steps,
-            text=[f"${abs(v):.2f}" if i in (0, len(discount_steps) - 1) else "" for i, v in enumerate(discount_steps)],
+            text=waterfall_text,
             textposition="outside",
             connector={"line": {"color": "rgba(120,120,120,0.6)"}},
             decreasing={"marker": {"color": "#9CA3AF"}},
